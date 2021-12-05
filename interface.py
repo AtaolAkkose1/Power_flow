@@ -14,8 +14,7 @@ def _create_circle(self, x, y, r, **kwargs):
 tk.Canvas.create_circle = _create_circle
 
 bara_dugum = []
-bara = []
-bara.append([0, 0, 0, 0])
+bara = [[0, 0, 0, 0]]
 bara_koor = {}
 baralar = {}
 koor = []
