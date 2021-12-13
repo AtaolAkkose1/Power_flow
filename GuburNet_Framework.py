@@ -10,6 +10,7 @@ warnings.simplefilter("ignore", np.ComplexWarning)
 j = (-1)**0.5
 wdt, hgt = 1920, 1080
 temel = tk.Tk()
+temel.title('GuburNetwork')
 Ana_ekran = tk.Canvas(temel, width=wdt, height=hgt, bg='white')
 Ana_ekran.pack()
 dugum_nok = []
@@ -30,7 +31,7 @@ def Bara():
         b = e.y
         a = a - (a*10)%10
         b = b - (b*10)%10
-
+        
         class Is_bara:
             def __init__(self):
                 self.Bara_ismi = tk.StringVar()
@@ -141,6 +142,7 @@ def Hat():
     def Olustur(e):
         a = e.x
         b = e.y
+        
         class Is_hat:
             def __init__(self):
                 self.hat_ismi = tk.StringVar(value=hatlar[f'{xn1}, {yn1}'][1])
@@ -312,6 +314,7 @@ def Trafo():
         b = e.y
         a = a - (a*10)%10
         b = b - (a*10)%10
+        
         class Is_trafo:
             def __init__(self):
                 self.trafo_ismi = tk.StringVar()
@@ -425,6 +428,7 @@ def Generator():
         b = e.y
         a = a - (a * 10) % 10
         b = b - (a * 10) % 10
+        
         class Is_gen:
             def __init__(self):
                 self.gen_ismi = tk.StringVar()
@@ -543,6 +547,7 @@ def Yuk():
         b = e.y
         a = a - (a * 10) % 10
         b = b - (a * 10) % 10
+        
         class Is_yuk:
             def __init__(self):
                 self.yuk_ismi = tk.StringVar()
@@ -826,15 +831,10 @@ def Cozum():
             print(f'Kayıp{i}-{k}', Kayıplar[i - 1][k - 1])
 
 bara_button = tk.Button(temel, text='Bara', command=Bara).place(x=15, y =15)
-
 hat_button = tk.Button(temel, text='Hat', command=Hat).place(x=48, y =15)
-
 cozum_button = tk.Button(temel,text='Çözüm', command=Cozum).place(x=77, y =15)
-
 gen_button = tk.Button(temel, text='Generator', command=Generator).place(x=125, y=15)
-
 trafo_button = tk.Button(temel, text='Trafo', command=Trafo).place(x=187, y=15)
-
 yuk_button = tk.Button(temel, text='Yük', command=Yuk).place(x=225, y=15)
 
 temel.mainloop()
