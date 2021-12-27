@@ -1,6 +1,6 @@
 import numpy as np
-import math;
-import cmath;
+import math
+import cmath
 import numpy.linalg
 import itertools
 import warnings
